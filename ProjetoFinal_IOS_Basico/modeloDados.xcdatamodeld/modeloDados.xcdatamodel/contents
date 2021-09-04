@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="19H1323" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Genero" representedClassName="Genero" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="nome" optional="YES" attributeType="String"/>
+        <relationship name="toJogo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Jogo" inverseName="toGenero" inverseEntity="Jogo"/>
+    </entity>
+    <entity name="Jogo" representedClassName="Jogo" syncable="YES" codeGenerationType="class">
+        <attribute name="desenvolvedora" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="nome" optional="YES" attributeType="String"/>
+        <relationship name="toGenero" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Genero" inverseName="toJogo" inverseEntity="Genero"/>
+    </entity>
+    <elements>
+        <element name="Genero" positionX="-54" positionY="-9" width="128" height="88"/>
+        <element name="Jogo" positionX="-36" positionY="27" width="128" height="103"/>
+    </elements>
+</model>
